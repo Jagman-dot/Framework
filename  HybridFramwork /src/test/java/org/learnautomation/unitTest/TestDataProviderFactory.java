@@ -1,5 +1,6 @@
 package org.learnautomation.unitTest;
 
+import org.learnautomation.factory.ConfigDataProvider;
 import org.learnautomation.factory.ExcelDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,6 +11,8 @@ public class TestDataProviderFactory {
 	// to ensure that its working
 	
 	// this method will test to excel sheet is readable
+	
+	
 	@Test
 	public void testExcelLib() {
 		
@@ -17,10 +20,24 @@ public class TestDataProviderFactory {
 		
 		ExcelDataProvider excel = new ExcelDataProvider();
 		
-		
 		String data = excel.getStringData("TestSheet", 0, 0);
 		
 		Assert.assertEquals(data, "TestingExcel");
+		
+	}
+	
+	@Test
+	public void testConfig() {
+		
+		
+		ConfigDataProvider con = new ConfigDataProvider();
+		
+		String data = con.getValue("test"); 
+		
+		Assert.assertEquals(data, "testingConfig");
+		
+		
+		
 		
 	}
 	
