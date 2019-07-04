@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
 
-	
+	 
 	
 	public static WebDriver startUpApplication(String appUrl, String driverName) {
 	
@@ -21,7 +21,11 @@ public class BrowserFactory {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
 			
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+			
 			driver = new ChromeDriver(options);
+			
+			
 			
 		} else if (driverName.equalsIgnoreCase("firefox"))
 		{
@@ -39,5 +43,13 @@ public class BrowserFactory {
 		return driver;
 	}
 	
+	
+	
+	
+	public static void closeApplication(WebDriver driver) {
+		
+		driver.quit();
+		
+	}
 	
 }

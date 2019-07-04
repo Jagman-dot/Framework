@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.learnautomation.unitTest.TestDataProviderFactory">
+      <class name="org.learnautomation.testcases.FirstLoginGmail">
         <methods>
-          <include name="testConfig"/>
+          <include name="logIn"/>
+          <include name="startUp"/>
+          <include name="tearDownTest"/>
+          <include name="tearDown"/>
+          <include name="SetupTestSuite"/>
         </methods>
-      </class> <!-- org.learnautomation.unitTest.TestDataProviderFactory -->
+      </class> <!-- org.learnautomation.testcases.FirstLoginGmail -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

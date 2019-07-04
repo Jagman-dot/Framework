@@ -1,11 +1,12 @@
 package org.learnautomation.pages;
 
+import org.learnautomation.testcases.BaseClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class LoginPage {
+public class LoginPage extends BaseClass {
 	
 WebDriver driver;
 	
@@ -27,20 +28,29 @@ WebDriver driver;
 	
 	
 	
-	
-	
-	public void LoginApplication(String userName, String password) throws Exception {
+
+	public void LoginApplication(String userName, String password) {
+		
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		
 		uname.sendKeys(userName);
 		next.click();
 		
-		Thread.sleep(3000);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		
 		pass.click();
 		pass.sendKeys(password);
 		nextPass.click();
-		
-		Thread.sleep(3000);
 		
 		
 	}

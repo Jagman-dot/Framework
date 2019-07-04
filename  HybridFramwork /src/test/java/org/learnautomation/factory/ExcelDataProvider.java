@@ -50,6 +50,7 @@ public class ExcelDataProvider {
 	//returns the cell value of type string
 	public String getStringData(String sheetName, int row, int column)
 	{
+		System.out.println("inside getStringData method");
 		return wb.getSheet(sheetName).getRow(row).getCell(column).getStringCellValue();	
 	}
 	

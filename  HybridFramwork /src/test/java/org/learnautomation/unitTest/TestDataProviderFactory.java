@@ -1,5 +1,7 @@
 package org.learnautomation.unitTest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.learnautomation.factory.ConfigDataProvider;
 import org.learnautomation.factory.ExcelDataProvider;
 import org.testng.Assert;
@@ -22,24 +24,26 @@ public class TestDataProviderFactory {
 		
 		String data = excel.getStringData("TestSheet", 0, 0);
 		
-		Assert.assertEquals(data, "TestingExcel");
+		AssertJUnit.assertEquals(data, "TestingExcel");
+		
+		System.out.println(data);
 		
 	}
 	
-	@Test
-	public void testConfig() {
-		
-		
-		ConfigDataProvider con = new ConfigDataProvider();
-		
-		String data = con.getValue("test"); 
-		
-		Assert.assertEquals(data, "testingConfig");
-		
-		
-		
-		
-	}
+//	@Test
+//	public void testConfig() {
+//		
+//		
+//		ConfigDataProvider con = new ConfigDataProvider();
+//		
+//		String data = con.getValue("test"); 
+//		
+//		AssertJUnit.assertEquals(data, "testingConfig");
+//		
+//		
+//		
+//		
+//	}
 	
 	
 	
