@@ -13,7 +13,7 @@ public class FirstLoginGmail extends BaseClass {
 	@Test
 	public void logIn() {
 		
-		System.out.println("2");
+		
 		logger = report.createTest("Gmail Login test");
 		
 		login = PageFactory.initElements(driver, LoginPage.class);
